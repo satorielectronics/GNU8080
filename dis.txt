@@ -14,7 +14,7 @@
 0011 Unknown Instruction: 0xc5	
 0012 Unknown Instruction: 0xd5	
 0013 Unknown Instruction: 0xe5	
-0014 MVI    A,#0x80
+0014 MVI    A,#$80
 0016 STA    $2072
 0019 LXI    H,#$20c0
 001c DCR    M
@@ -25,20 +25,16 @@
 0021 LXI    B,#$da0f
 0024 Unknown Instruction: 0x67	
 0025 NOP
-0026 Unknown Instruction: 0x3a	
-0027 Unknown Instruction: 0xea	
-0028 Unknown Instruction: 0x20	
+0026 LDA    $20ea
 0029 Unknown Instruction: 0xa7	
 002a Unknown Instruction: 0xca	
-002b Unknown Instruction: 0x42	
+002b MOV    B,E
 002c NOP
-002d Unknown Instruction: 0x3a	
-002e Unknown Instruction: 0xeb	
-002f Unknown Instruction: 0x20	
+002d LDA    $20eb
 0030 Unknown Instruction: 0xfe	
 0031 Unknown Instruction: 0x99	
 0032 Unknown Instruction: 0xca	
-0033 MVI    A,#0x00
+0033 MVI    A,#$00
 0035 Unknown Instruction: 0xc6	
 0036 LXI    B,#$3227
 0039 Unknown Instruction: 0xeb	
@@ -48,23 +44,17 @@
 003d DAD    D
 003e Unknown Instruction: 0xaf	
 003f STA    $20ea
-0042 Unknown Instruction: 0x3a	
-0043 Unknown Instruction: 0xe9	
-0044 Unknown Instruction: 0x20	
+0042 LDA    $20e9
 0045 Unknown Instruction: 0xa7	
 0046 Unknown Instruction: 0xca	
 0047 Unknown Instruction: 0x82	
 0048 NOP
-0049 Unknown Instruction: 0x3a	
-004a Unknown Instruction: 0xef	
-004b Unknown Instruction: 0x20	
+0049 LDA    $20ef
 004c Unknown Instruction: 0xa7	
 004d Unknown Instruction: 0xc2	
 004e Unknown Instruction: 0x6f	
 004f NOP
-0050 Unknown Instruction: 0x3a	
-0051 Unknown Instruction: 0xeb	
-0052 Unknown Instruction: 0x20	
+0050 LDA    $20eb
 0053 Unknown Instruction: 0xa7	
 0054 Unknown Instruction: 0xc2	
 0055 Unknown Instruction: 0x5d	
@@ -73,24 +63,20 @@
 0058 Unknown Instruction: 0xbf	
 0059 LDAX   BDCX    B
 005a JMP    $0082
-005d Unknown Instruction: 0x3a	
-005e Unknown Instruction: 0x93	
-005f Unknown Instruction: 0x20	
+005d LDA    $2093
 0060 Unknown Instruction: 0xa7	
 0061 Unknown Instruction: 0xc2	
 0062 Unknown Instruction: 0x82	
 0063 NOP
 0064 JMP    $0765
-0067 MVI    A,#0x01
+0067 MVI    A,#$01
 0069 STA    $20ea
 006c JMP    $003f
 006f Unknown Instruction: 0xcd	
-0070 Unknown Instruction: 0x40	
+0070 MOV    B,B
 0071 RAL
-0072 Unknown Instruction: 0x3a	
-0073 STA    $3220
-0076 Unknown Instruction: 0x80	
-0077 Unknown Instruction: 0x20	
+0072 LDA    $2032
+0075 STA    $2080
 0078 Unknown Instruction: 0xcd	
 0079 NOP
 007a LXI    B,#$48cd
@@ -111,23 +97,17 @@
 008b NOP
 008c Unknown Instruction: 0xaf	
 008d STA    $2072
-0090 Unknown Instruction: 0x3a	
-0091 Unknown Instruction: 0xe9	
-0092 Unknown Instruction: 0x20	
+0090 LDA    $20e9
 0093 Unknown Instruction: 0xa7	
 0094 Unknown Instruction: 0xca	
 0095 Unknown Instruction: 0x82	
 0096 NOP
-0097 Unknown Instruction: 0x3a	
-0098 Unknown Instruction: 0xef	
-0099 Unknown Instruction: 0x20	
+0097 LDA    $20ef
 009a Unknown Instruction: 0xa7	
 009b Unknown Instruction: 0xc2	
 009c Unknown Instruction: 0xa5	
 009d NOP
-009e Unknown Instruction: 0x3a	
-009f Unknown Instruction: 0xc1	
-00a0 Unknown Instruction: 0x20	
+009e LDA    $20c1
 00a1 RRC
 00a2 Unknown Instruction: 0xd2	
 00a3 Unknown Instruction: 0x82	
@@ -137,7 +117,7 @@
 00a9 Unknown Instruction: 0x4b	
 00aa STAX   B
 00ab Unknown Instruction: 0xcd	
-00ac Unknown Instruction: 0x41	
+00ac MOV    B,C
 00ad LXI    B,#$82c3
 00b0 NOP
 00b1 Unknown Instruction: 0xcd	
@@ -158,18 +138,18 @@
 00c4 Unknown Instruction: 0xc2	
 00c5 Unknown Instruction: 0xc8	
 00c6 NOP
-00c7 Unknown Instruction: 0x3d	
+00c7 DCR    A
 00c8 STA    $2008
 00cb Unknown Instruction: 0xfe	
 00cc Unknown Instruction: 0xfe	
-00cd MVI    A,#0x00
+00cd MVI    A,#$00
 00cf Unknown Instruction: 0xc2	
 00d0 Unknown Instruction: 0xd3	
 00d1 NOP
-00d2 Unknown Instruction: 0x3c	
+00d2 INR    A
 00d3 STA    $200d
 00d6 Unknown Instruction: 0xc9	
-00d7 MVI    A,#0x02
+00d7 MVI    A,#$02
 00d9 STA    $21fb
 00dc STA    $22fb
 00df JMP    $08e4
@@ -210,12 +190,9 @@
 0106 Unknown Instruction: 0x38	
 0107 DCR    D
 0108 Unknown Instruction: 0xe5	
-0109 Unknown Instruction: 0x3a	
-010a MVI    B,#$20
+0109 LDA    $2006
 010c Unknown Instruction: 0x6f	
-010d Unknown Instruction: 0x3a	
-010e Unknown Instruction: 0x67	
-010f Unknown Instruction: 0x20	
+010d LDA    $2067
 0110 Unknown Instruction: 0x67	
 0111 Unknown Instruction: 0x7e	
 0112 Unknown Instruction: 0xa7	
@@ -240,7 +217,7 @@
 0129 Unknown Instruction: 0x78	
 012a Unknown Instruction: 0xa7	
 012b Unknown Instruction: 0xc4	
-012c Unknown Instruction: 0x3b	
+012c DCX    SP
 012d LXI    B,#$0b2a
 0130 Unknown Instruction: 0x20	
 0131 MVI    B,#$10
@@ -254,26 +231,19 @@
 013e DAD    D
 013f Unknown Instruction: 0xeb	
 0140 Unknown Instruction: 0xc9	
-0141 Unknown Instruction: 0x3a	
-0142 Unknown Instruction: 0x68	
-0143 Unknown Instruction: 0x20	
+0141 LDA    $2068
 0144 Unknown Instruction: 0xa7	
 0145 Unknown Instruction: 0xc8	
-0146 Unknown Instruction: 0x3a	
-0147 NOP
-0148 Unknown Instruction: 0x20	
+0146 LDA    $2000
 0149 Unknown Instruction: 0xa7	
 014a Unknown Instruction: 0xc0	
-014b Unknown Instruction: 0x3a	
-014c Unknown Instruction: 0x67	
-014d Unknown Instruction: 0x20	
+014b LDA    $2067
 014e Unknown Instruction: 0x67	
-014f Unknown Instruction: 0x3a	
-0150 MVI    B,#$20
+014f LDA    $2006
 0152 MVI    D,#$02
-0154 Unknown Instruction: 0x3c	
+0154 INR    A
 0155 Unknown Instruction: 0xfe	
-0156 Unknown Instruction: 0x37	
+0156 STC
 0157 Unknown Instruction: 0xcc	
 0158 Unknown Instruction: 0xa1	
 0159 LXI    B,#$466f
@@ -295,7 +265,7 @@
 016f DAD    D
 0170 Unknown Instruction: 0x7a	
 0171 STA    $2004
-0174 MVI    A,#0x01
+0174 MVI    A,#$01
 0176 STA    $2000
 0179 Unknown Instruction: 0xc9	
 017a MVI    D,#$00
@@ -326,7 +296,7 @@
 019a NOP
 019b Unknown Instruction: 0x4f	
 019c Unknown Instruction: 0x7b	
-019d Unknown Instruction: 0x3d	
+019d DCR    A
 019e JMP    $0195
 01a1 DCR    D
 01a2 Unknown Instruction: 0xca	
@@ -342,7 +312,7 @@
 01b0 LXI    B,#$0521
 01b3 Unknown Instruction: 0x20	
 01b4 Unknown Instruction: 0x7e	
-01b5 Unknown Instruction: 0x3c	
+01b5 INR    A
 01b6 Unknown Instruction: 0xe6	
 01b7 LXI    B,#$af77
 01ba LXI    H,#$2067
@@ -358,7 +328,7 @@
 01ca Unknown Instruction: 0xc5	
 01cb LXI    B,#$e1c9
 01ce Unknown Instruction: 0xc9	
-01cf MVI    A,#0x01
+01cf MVI    A,#$01
 01d1 MVI    B,#$e0
 01d3 LXI    H,#$2402
 01d6 JMP    $14cc
@@ -392,7 +362,7 @@
 0207 LXI    B,#$3ec9
 020a LXI    B,#$1bc3
 020d STAX   B
-020e MVI    A,#0x01
+020e MVI    A,#$01
 0210 JMP    $0214
 0213 Unknown Instruction: 0xaf	
 0214 LXI    D,#$2242
@@ -402,22 +372,20 @@
 021e STA    $2081
 0221 LXI    B,#$1602
 0224 LXI    H,#$2806
-0227 MVI    A,#0x04
+0227 MVI    A,#$04
 0229 Unknown Instruction: 0xf5	
 022a Unknown Instruction: 0xc5	
-022b Unknown Instruction: 0x3a	
-022c Unknown Instruction: 0x81	
-022d Unknown Instruction: 0x20	
+022b LDA    $2081
 022e Unknown Instruction: 0xa7	
 022f Unknown Instruction: 0xc2	
-0230 Unknown Instruction: 0x42	
+0230 MOV    B,E
 0231 STAX   B
 0232 Unknown Instruction: 0xcd	
 0233 Unknown Instruction: 0x69	
 0234 LDAX   D
 0235 Unknown Instruction: 0xc1	
 0236 Unknown Instruction: 0xf1	
-0237 Unknown Instruction: 0x3d	
+0237 DCR    A
 0238 Unknown Instruction: 0xc8	
 0239 Unknown Instruction: 0xd5	
 023a LXI    D,#$02e0
@@ -472,7 +440,7 @@
 0279 Unknown Instruction: 0xc2	
 027a Unknown Instruction: 0x7d	
 027b STAX   B
-027c Unknown Instruction: 0x3d	
+027c DCR    A
 027d DCR    B
 027e Unknown Instruction: 0x70	
 027f DCX    H
@@ -490,7 +458,7 @@
 0291 Unknown Instruction: 0xfe	
 0292 Unknown Instruction: 0xff	
 0293 Unknown Instruction: 0xca	
-0294 Unknown Instruction: 0x3b	
+0294 DCX    SP
 0295 INX    B
 0296 INX    H
 0297 DCR    M
@@ -499,7 +467,7 @@
 029a Unknown Instruction: 0xaf	
 029b STA    $2068
 029e STA    $2069
-02a1 MVI    A,#0x30
+02a1 MVI    A,#$30
 02a3 STA    $206a
 02a6 Unknown Instruction: 0x78	
 02a7 MVI    M,#$05
@@ -522,14 +490,10 @@
 02c3 Unknown Instruction: 0xcd	
 02c4 Unknown Instruction: 0xdc	
 02c5 DAD    D
-02c6 Unknown Instruction: 0x3a	
-02c7 Unknown Instruction: 0x6d	
-02c8 Unknown Instruction: 0x20	
+02c6 LDA    $206d
 02c9 Unknown Instruction: 0xa7	
 02ca Unknown Instruction: 0xc0	
-02cb Unknown Instruction: 0x3a	
-02cc Unknown Instruction: 0xef	
-02cd Unknown Instruction: 0x20	
+02cb LDA    $20ef
 02ce Unknown Instruction: 0xa7	
 02cf Unknown Instruction: 0xc8	
 02d0 LXI    SP, #$2400
@@ -550,16 +514,12 @@
 02e3 Unknown Instruction: 0xca	
 02e4 INR    L
 02e5 INX    B
-02e6 Unknown Instruction: 0x3a	
-02e7 Unknown Instruction: 0xce	
-02e8 Unknown Instruction: 0x20	
+02e6 LDA    $20ce
 02e9 Unknown Instruction: 0xa7	
 02ea Unknown Instruction: 0xca	
 02eb INR    L
 02ec INX    B
-02ed Unknown Instruction: 0x3a	
-02ee Unknown Instruction: 0x67	
-02ef Unknown Instruction: 0x20	
+02ed LDA    $2067
 02f0 Unknown Instruction: 0xf5	
 02f1 RRC
 02f2 Unknown Instruction: 0xda	
@@ -578,13 +538,13 @@
 0302 Unknown Instruction: 0xcd	
 0303 Unknown Instruction: 0xe4	
 0304 LXI    B,#$0ff1
-0307 MVI    A,#0x21
+0307 MVI    A,#$21
 0309 MVI    B,#$00
 030b Unknown Instruction: 0xd2	
 030c STAX   D
 030d INX    B
 030e MVI    B,#$20
-0310 MVI    A,#0x22
+0310 MVI    A,#$22
 0312 STA    $2067
 0315 Unknown Instruction: 0xcd	
 0316 Unknown Instruction: 0xb6	
@@ -594,7 +554,7 @@
 031c Unknown Instruction: 0x78	
 031d Unknown Instruction: 0xd3	
 031e DCR    B
-031f Unknown Instruction: 0x3c	
+031f INR    A
 0320 STA    $2098
 0323 Unknown Instruction: 0xcd	
 0324 Unknown Instruction: 0xd6	
@@ -623,20 +583,14 @@
 0346 NOP
 0347 DCX    H
 0348 MVI    M,#$01
-034a Unknown Instruction: 0x3a	
-034b DCX    D
-034c Unknown Instruction: 0x20	
+034a LDA    $201b
 034d Unknown Instruction: 0x47	
-034e Unknown Instruction: 0x3a	
-034f Unknown Instruction: 0xef	
-0350 Unknown Instruction: 0x20	
+034e LDA    $20ef
 0351 Unknown Instruction: 0xa7	
 0352 Unknown Instruction: 0xc2	
 0353 Unknown Instruction: 0x63	
 0354 INX    B
-0355 Unknown Instruction: 0x3a	
-0356 DCR    E
-0357 Unknown Instruction: 0x20	
+0355 LDA    $201d
 0358 RRC
 0359 Unknown Instruction: 0xda	
 035a Unknown Instruction: 0x81	
@@ -660,15 +614,15 @@
 036e INX    B
 036f LXI    H,#$2018
 0372 Unknown Instruction: 0xcd	
-0373 Unknown Instruction: 0x3b	
+0373 DCX    SP
 0374 LDAX   D
 0375 Unknown Instruction: 0xcd	
 0376 Unknown Instruction: 0x47	
 0377 LDAX   D
 0378 Unknown Instruction: 0xcd	
-0379 Unknown Instruction: 0x39	
+0379 DAD    SP
 037a INR    D
-037b MVI    A,#0x00
+037b MVI    A,#$00
 037d STA    $2012
 0380 Unknown Instruction: 0xc9	
 0381 Unknown Instruction: 0x78	
@@ -677,7 +631,7 @@
 0384 Unknown Instruction: 0xca	
 0385 Unknown Instruction: 0x6f	
 0386 INX    B
-0387 Unknown Instruction: 0x3c	
+0387 INR    A
 0388 STA    $201b
 038b JMP    $036f
 038e Unknown Instruction: 0x78	
@@ -686,10 +640,10 @@
 0391 Unknown Instruction: 0xca	
 0392 Unknown Instruction: 0x6f	
 0393 INX    B
-0394 Unknown Instruction: 0x3d	
+0394 DCR    A
 0395 STA    $201b
 0398 JMP    $036f
-039b Unknown Instruction: 0x3c	
+039b INR    A
 039c Unknown Instruction: 0xe6	
 039d LXI    B,#$1532
 03a0 Unknown Instruction: 0x20	
@@ -763,11 +717,9 @@
 03f5 Unknown Instruction: 0x30	
 03f6 INR    B
 03f7 JMP    $1400
-03fa Unknown Instruction: 0x3c	
+03fa INR    A
 03fb Unknown Instruction: 0x77	
-03fc Unknown Instruction: 0x3a	
-03fd DCX    D
-03fe Unknown Instruction: 0x20	
+03fc LDA    $201b
 03ff Unknown Instruction: 0xc6	
 0400 NOP
 0401 STA    $202a
@@ -787,18 +739,14 @@
 0413 Unknown Instruction: 0xc1	
 0414 Unknown Instruction: 0xe1	
 0415 Unknown Instruction: 0xd1	
-0416 Unknown Instruction: 0x3a	
-0417 INR    L
-0418 Unknown Instruction: 0x20	
+0416 LDA    $202c
 0419 Unknown Instruction: 0x85	
 041a Unknown Instruction: 0x6f	
 041b STA    $2029
 041e Unknown Instruction: 0xcd	
 041f Unknown Instruction: 0x91	
 0420 INR    D
-0421 Unknown Instruction: 0x3a	
-0422 Unknown Instruction: 0x61	
-0423 Unknown Instruction: 0x20	
+0421 LDA    $2061
 0424 Unknown Instruction: 0xa7	
 0425 Unknown Instruction: 0xc8	
 0426 STA    $2002
@@ -834,9 +782,7 @@
 0456 LHLD   $208f
 0459 INR    L
 045a SHLD   $208f
-045d Unknown Instruction: 0x3a	
-045e Unknown Instruction: 0x84	
-045f Unknown Instruction: 0x20	
+045d LDA    $2084
 0460 Unknown Instruction: 0xa7	
 0461 Unknown Instruction: 0xc0	
 0462 Unknown Instruction: 0x7e	
@@ -854,11 +800,9 @@
 0474 Unknown Instruction: 0x70	
 0475 Unknown Instruction: 0xc9	
 0476 Unknown Instruction: 0xe1	
-0477 Unknown Instruction: 0x3a	
-0478 STA    $321b
-047b STA    $2a20
-047e Unknown Instruction: 0x38	
-047f Unknown Instruction: 0x20	
+0477 LDA    $1b32
+047a STA    $2032
+047d LHLD   $2038
 0480 Unknown Instruction: 0x7d	
 0481 Unknown Instruction: 0xb4	
 0482 Unknown Instruction: 0xc2	
@@ -868,24 +812,18 @@
 0486 SHLD   $2038
 0489 Unknown Instruction: 0xc9	
 048a LXI    D,#$2035
-048d MVI    A,#0xf9
+048d MVI    A,#$f9
 048f Unknown Instruction: 0xcd	
 0490 Unknown Instruction: 0x50	
 0491 DCR    B
-0492 Unknown Instruction: 0x3a	
-0493 Unknown Instruction: 0x46	
-0494 Unknown Instruction: 0x20	
+0492 LDA    $2046
 0495 STA    $2070
-0498 Unknown Instruction: 0x3a	
-0499 Unknown Instruction: 0x56	
-049a Unknown Instruction: 0x20	
+0498 LDA    $2056
 049b STA    $2071
 049e Unknown Instruction: 0xcd	
 049f Unknown Instruction: 0x63	
 04a0 DCR    B
-04a1 Unknown Instruction: 0x3a	
-04a2 Unknown Instruction: 0x78	
-04a3 Unknown Instruction: 0x20	
+04a1 LDA    $2078
 04a4 Unknown Instruction: 0xa7	
 04a5 LXI    H,#$2035
 04a8 Unknown Instruction: 0xc2	
@@ -896,47 +834,34 @@
 04b1 MVI    B,#$10
 04b3 JMP    $1a32
 04b6 Unknown Instruction: 0xe1	
-04b7 Unknown Instruction: 0x3a	
-04b8 Unknown Instruction: 0x6e	
-04b9 Unknown Instruction: 0x20	
+04b7 LDA    $206e
 04ba Unknown Instruction: 0xa7	
 04bb Unknown Instruction: 0xc0	
-04bc Unknown Instruction: 0x3a	
-04bd Unknown Instruction: 0x80	
-04be Unknown Instruction: 0x20	
+04bc LDA    $2080
 04bf Unknown Instruction: 0xfe	
 04c0 LXI    B,#$11c0
 04c3 Unknown Instruction: 0x45	
 04c4 Unknown Instruction: 0x20	
-04c5 MVI    A,#0xed
+04c5 MVI    A,#$ed
 04c7 Unknown Instruction: 0xcd	
 04c8 Unknown Instruction: 0x50	
 04c9 DCR    B
-04ca Unknown Instruction: 0x3a	
-04cb MVI    M,#$20
+04ca LDA    $2036
 04cd STA    $2070
-04d0 Unknown Instruction: 0x3a	
-04d1 Unknown Instruction: 0x56	
-04d2 Unknown Instruction: 0x20	
+04d0 LDA    $2056
 04d3 STA    $2071
 04d6 Unknown Instruction: 0xcd	
 04d7 Unknown Instruction: 0x63	
 04d8 DCR    B
-04d9 Unknown Instruction: 0x3a	
-04da Unknown Instruction: 0x76	
-04db Unknown Instruction: 0x20	
+04d9 LDA    $2076
 04dc Unknown Instruction: 0xfe	
 04dd NOP
 04de Unknown Instruction: 0xda	
 04df Unknown Instruction: 0xe7	
 04e0 INR    B
-04e1 Unknown Instruction: 0x3a	
-04e2 Unknown Instruction: 0x48	
-04e3 DCX    D
+04e1 LDA    $1b48
 04e4 STA    $2076
-04e7 Unknown Instruction: 0x3a	
-04e8 Unknown Instruction: 0x78	
-04e9 Unknown Instruction: 0x20	
+04e7 LDA    $2078
 04ea Unknown Instruction: 0xa7	
 04eb LXI    H,#$2045
 04ee Unknown Instruction: 0xc2	
@@ -949,45 +874,36 @@
 04fa STA    $3a1a
 04fd Unknown Instruction: 0x82	
 04fe Unknown Instruction: 0x20	
-04ff Unknown Instruction: 0x3d	
+04ff DCR    A
 0500 Unknown Instruction: 0xc2	
 0501 NOP
 0502 DCR    B
-0503 MVI    A,#0x01
+0503 MVI    A,#$01
 0505 STA    $206e
 0508 LHLD   $2076
 050b JMP    $067e
 050e Unknown Instruction: 0xe1	
 050f LXI    D,#$2055
-0512 MVI    A,#0xdb
+0512 MVI    A,#$db
 0514 Unknown Instruction: 0xcd	
 0515 Unknown Instruction: 0x50	
 0516 DCR    B
-0517 Unknown Instruction: 0x3a	
-0518 Unknown Instruction: 0x46	
-0519 Unknown Instruction: 0x20	
+0517 LDA    $2046
 051a STA    $2070
-051d Unknown Instruction: 0x3a	
-051e MVI    M,#$20
+051d LDA    $2036
 0520 STA    $2071
 0523 Unknown Instruction: 0xcd	
 0524 Unknown Instruction: 0x63	
 0525 DCR    B
-0526 Unknown Instruction: 0x3a	
-0527 Unknown Instruction: 0x76	
-0528 Unknown Instruction: 0x20	
+0526 LDA    $2076
 0529 Unknown Instruction: 0xfe	
 052a DCR    D
 052b Unknown Instruction: 0xda	
 052c INR    M
 052d DCR    B
-052e Unknown Instruction: 0x3a	
-052f Unknown Instruction: 0x58	
-0530 DCX    D
+052e LDA    $1b58
 0531 STA    $2076
-0534 Unknown Instruction: 0x3a	
-0535 Unknown Instruction: 0x78	
-0536 Unknown Instruction: 0x20	
+0534 LDA    $2078
 0537 Unknown Instruction: 0xa7	
 0538 LXI    H,#$2055
 053b Unknown Instruction: 0xc2	
@@ -1016,14 +932,10 @@
 0569 Unknown Instruction: 0xc2	
 056a Unknown Instruction: 0xc1	
 056b DCR    B
-056c Unknown Instruction: 0x3a	
-056d Unknown Instruction: 0xc1	
-056e Unknown Instruction: 0x20	
+056c LDA    $20c1
 056f Unknown Instruction: 0xfe	
 0570 INR    B
-0571 Unknown Instruction: 0x3a	
-0572 Unknown Instruction: 0x69	
-0573 Unknown Instruction: 0x20	
+0571 LDA    $2069
 0574 Unknown Instruction: 0xca	
 0575 Unknown Instruction: 0xb7	
 0576 DCR    B
@@ -1031,30 +943,22 @@
 0578 Unknown Instruction: 0xc8	
 0579 INX    H
 057a MVI    M,#$00
-057c Unknown Instruction: 0x3a	
-057d Unknown Instruction: 0x70	
-057e Unknown Instruction: 0x20	
+057c LDA    $2070
 057f Unknown Instruction: 0xa7	
 0580 Unknown Instruction: 0xca	
 0581 Unknown Instruction: 0x89	
 0582 DCR    B
 0583 Unknown Instruction: 0x47	
-0584 Unknown Instruction: 0x3a	
-0585 Unknown Instruction: 0xcf	
-0586 Unknown Instruction: 0x20	
+0584 LDA    $20cf
 0587 Unknown Instruction: 0xb8	
 0588 Unknown Instruction: 0xd0	
-0589 Unknown Instruction: 0x3a	
-058a Unknown Instruction: 0x71	
-058b Unknown Instruction: 0x20	
+0589 LDA    $2071
 058c Unknown Instruction: 0xa7	
 058d Unknown Instruction: 0xca	
 058e Unknown Instruction: 0x96	
 058f DCR    B
 0590 Unknown Instruction: 0x47	
-0591 Unknown Instruction: 0x3a	
-0592 Unknown Instruction: 0xcf	
-0593 Unknown Instruction: 0x20	
+0591 LDA    $20cf
 0594 Unknown Instruction: 0xb8	
 0595 Unknown Instruction: 0xd0	
 0596 INX    H
@@ -1115,13 +1019,9 @@
 05e0 Unknown Instruction: 0xd6	
 05e1 INR    C
 05e2 STA    $2079
-05e5 Unknown Instruction: 0x3a	
-05e6 Unknown Instruction: 0x7b	
-05e7 Unknown Instruction: 0x20	
+05e5 LDA    $207b
 05e8 Unknown Instruction: 0x47	
-05e9 Unknown Instruction: 0x3a	
-05ea Unknown Instruction: 0x7e	
-05eb Unknown Instruction: 0x20	
+05e9 LDA    $207e
 05ec Unknown Instruction: 0x80	
 05ed STA    $207b
 05f0 Unknown Instruction: 0xcd	
@@ -1138,9 +1038,7 @@
 05fd Unknown Instruction: 0x20	
 05fe Unknown Instruction: 0xa7	
 05ff Unknown Instruction: 0xc8	
-0600 Unknown Instruction: 0x3a	
-0601 Unknown Instruction: 0x7b	
-0602 Unknown Instruction: 0x20	
+0600 LDA    $207b
 0603 Unknown Instruction: 0xfe	
 0604 MVI    E,#$da
 0606 STAX   D
@@ -1151,16 +1049,12 @@
 060c STAX   D
 060d MVI    B,#$97
 060f STA    $2015
-0612 Unknown Instruction: 0x3a	
-0613 Unknown Instruction: 0x73	
-0614 Unknown Instruction: 0x20	
+0612 LDA    $2073
 0615 Unknown Instruction: 0xf6	
 0616 LXI    B,#$7332
 0619 Unknown Instruction: 0x20	
 061a Unknown Instruction: 0xc9	
-061b Unknown Instruction: 0x3a	
-061c DCX    D
-061d Unknown Instruction: 0x20	
+061b LDA    $201b
 061e Unknown Instruction: 0xc6	
 061f NOP
 0620 Unknown Instruction: 0x67	
@@ -1176,15 +1070,13 @@
 062a MVI    C,#$0b
 062c JMP    $05a5
 062f DCR    C
-0630 Unknown Instruction: 0x3a	
-0631 Unknown Instruction: 0x67	
-0632 Unknown Instruction: 0x20	
+0630 LDA    $2067
 0633 Unknown Instruction: 0x67	
 0634 Unknown Instruction: 0x69	
 0635 MVI    D,#$05
 0637 Unknown Instruction: 0x7e	
 0638 Unknown Instruction: 0xa7	
-0639 Unknown Instruction: 0x37	
+0639 STC
 063a Unknown Instruction: 0xc0	
 063b Unknown Instruction: 0x7d	
 063c Unknown Instruction: 0xc6	
@@ -1192,7 +1084,7 @@
 063e Unknown Instruction: 0x6f	
 063f DCR    D
 0640 Unknown Instruction: 0xc2	
-0641 Unknown Instruction: 0x37	
+0641 STC
 0642 MVI    B,#$c9
 0644 LXI    H,#$2078
 0647 DCR    M
@@ -1213,7 +1105,7 @@
 065c DCX    H
 065d DCR    M
 065e DCR    M
-065f MVI    A,#0x06
+065f MVI    A,#$06
 0661 STA    $207d
 0664 JMP    $066c
 0667 Unknown Instruction: 0xa7	
@@ -1221,20 +1113,18 @@
 0669 JMP    $0675
 066c LXI    H,#$2079
 066f Unknown Instruction: 0xcd	
-0670 Unknown Instruction: 0x3b	
+0670 DCX    SP
 0671 LDAX   D
 0672 JMP    $1491
 0675 LXI    H,#$2079
 0678 Unknown Instruction: 0xcd	
-0679 Unknown Instruction: 0x3b	
+0679 DCX    SP
 067a LDAX   D
 067b JMP    $1452
 067e SHLD   $2048
 0681 Unknown Instruction: 0xc9	
 0682 Unknown Instruction: 0xe1	
-0683 Unknown Instruction: 0x3a	
-0684 Unknown Instruction: 0x80	
-0685 Unknown Instruction: 0x20	
+0683 LDA    $2080
 0686 Unknown Instruction: 0xfe	
 0687 STAX   B
 0688 Unknown Instruction: 0xc0	
@@ -1244,9 +1134,7 @@
 068e Unknown Instruction: 0xca	
 068f RRC
 0690 DCR    B
-0691 Unknown Instruction: 0x3a	
-0692 Unknown Instruction: 0x56	
-0693 Unknown Instruction: 0x20	
+0691 LDA    $2056
 0694 Unknown Instruction: 0xa7	
 0695 Unknown Instruction: 0xc2	
 0696 RRC
@@ -1266,7 +1154,7 @@
 06a5 DCR    B
 06a6 MVI    M,#$01
 06a8 Unknown Instruction: 0xcd	
-06a9 Unknown Instruction: 0x3c	
+06a9 INR    A
 06aa RLC
 06ab LXI    D,#$208a
 06ae Unknown Instruction: 0xcd	
@@ -1286,7 +1174,7 @@
 06c0 Unknown Instruction: 0x86	
 06c1 STA    $208a
 06c4 Unknown Instruction: 0xcd	
-06c5 Unknown Instruction: 0x3c	
+06c5 INR    A
 06c6 RLC
 06c7 LXI    H,#$208a
 06ca Unknown Instruction: 0x7e	
@@ -1331,7 +1219,7 @@
 06f7 NOP
 06f8 NOP
 06f9 Unknown Instruction: 0xcd	
-06fa Unknown Instruction: 0x42	
+06fa MOV    B,E
 06fb RLC
 06fc Unknown Instruction: 0xcd	
 06fd Unknown Instruction: 0xcb	
@@ -1343,7 +1231,7 @@
 0706 RLC
 0707 MVI    B,#$fe
 0709 JMP    $19dc
-070c MVI    A,#0x01
+070c MVI    A,#$01
 070e STA    $20f1
 0711 LHLD   $208d
 0714 Unknown Instruction: 0x46	
@@ -1371,16 +1259,16 @@
 0732 DAD    H
 0733 SHLD   $20f2
 0736 Unknown Instruction: 0xcd	
-0737 Unknown Instruction: 0x42	
+0737 MOV    B,E
 0738 RLC
 0739 JMP    $08f1
 073c Unknown Instruction: 0xcd	
-073d Unknown Instruction: 0x42	
+073d MOV    B,E
 073e RLC
 073f JMP    $1439
 0742 LXI    H,#$2087
 0745 Unknown Instruction: 0xcd	
-0746 Unknown Instruction: 0x3b	
+0746 DCX    SP
 0747 LDAX   D
 0748 JMP    $1a47
 074b MVI    B,#$10
@@ -1396,7 +1284,7 @@
 075c JMP    $073c
 075f LXI    D,#$1b83
 0762 JMP    $1a32
-0765 MVI    A,#0x01
+0765 MVI    A,#$01
 0767 STA    $2093
 076a LXI    SP, #$2400
 076d Unknown Instruction: 0xfb	
@@ -1412,10 +1300,8 @@
 077c Unknown Instruction: 0xcd	
 077d Unknown Instruction: 0xf3	
 077e NOP
-077f Unknown Instruction: 0x3a	
-0780 Unknown Instruction: 0xeb	
-0781 Unknown Instruction: 0x20	
-0782 Unknown Instruction: 0x3d	
+077f LDA    $20eb
+0782 DCR    A
 0783 LXI    H,#$2810
 0786 MVI    C,#$14
 0788 Unknown Instruction: 0xc2	
@@ -1433,9 +1319,7 @@
 0798 MVI    B,#$99
 079a Unknown Instruction: 0xaf	
 079b STA    $20ce
-079e Unknown Instruction: 0x3a	
-079f Unknown Instruction: 0xeb	
-07a0 Unknown Instruction: 0x20	
+079e LDA    $20eb
 07a1 Unknown Instruction: 0x80	
 07a2 DAA
 07a3 STA    $20eb
