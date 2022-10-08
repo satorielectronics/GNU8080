@@ -74,7 +74,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x3b: printf("DCX    SP"); break;
     case 0x3c: printf("INR    A"); break;
     case 0x3d: printf("DCR    A"); break;
-    case 0x3e: printf("MVI    A,#$%02x", code[1]); opbytes = 2; break;
+    case 0x3e: printf("MVI    A,#0x%02x", code[1]); opbytes = 2; break;
     case 0x3f: printf("CMC"); break;
     case 0x40: printf("MOV    B,B"); break;
     case 0x41: printf("MOV    B,C"); break;
