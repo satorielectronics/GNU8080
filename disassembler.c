@@ -140,8 +140,22 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x7d: printf("MOV    A,L"); break;
     case 0x7e: printf("MOV    A,M"); break;
     case 0x7f: printf("MOV    A,A"); break;
-
-
+    case 0x80: printf("ADD    B"); break;
+    case 0x81: printf("ADD    C"); break;
+    case 0x82: printf("ADD    D"); break;
+    case 0x83: printf("ADD    E"); break;
+    case 0x84: printf("ADD    H"); break;
+    case 0x85: printf("ADD    L"); break;
+    case 0x86: printf("ADD    M"); break;
+    case 0x87: printf("ADD    A"); break;
+    case 0x88: printf("ADC    B"); break;
+    case 0x89: printf("ADC    C"); break;
+    case 0x8a: printf("ADC    D)"); break;
+    case 0x8b: printf("ADC    E"); break;
+    case 0x8c: printf("ADC    H"); break;
+    case 0x8d: printf("ADC    L"); break;
+    case 0x8e: printf("ADC    M"); break;
+    case 0x8f: printf("ADC    A"); break;
 
 
 
@@ -171,9 +185,9 @@ if(fp == NULL){
 
   //Read the file into memory buffer
   //first get the file size using fseek
-  fseek(fp, 0, SEEK_END); //seek the cursor to the end of the file
-  int fsize = ftell(fp); //store the size of the file
-  fseek(fp, 0, SEEK_SET); //set the cursor to the beginning of the file
+  fseek(fp, 0, SEEK_END); //fseek cursor to END of file
+  int fsize = ftell(fp); //store file size while SEEK_END
+  fseek(fp, 0, SEEK_SET); //fseek SET the cursor to beginning of file
 
   //allocate a buffer using malloc() to store the file in it
   unsigned char *buffer = malloc(fsize);
