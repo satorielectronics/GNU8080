@@ -189,6 +189,21 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xae: printf("XRA    M"); break;
     case 0xaf: printf("XRA    A"); break;
     case 0xb0: printf("ORA    B"); break;
+    case 0xb1: printf("ORA    C"); break;
+    case 0xb2: printf("ORA    D"); break;
+    case 0xb3: printf("ORA    E"); break;
+    case 0xb4: printf("ORA    H"); break;
+    case 0xb5: printf("ORA    L"); break;
+    case 0xb6: printf("ORA    M"); break;
+    case 0xb7: printf("ORA    A"); break;
+    case 0xb8: printf("CMP    B"); break;
+    case 0xb9: printf("CMP    C"); break;
+    case 0xba: printf("CMP    D"); break;
+    case 0xbb: printf("CMP    E"); break;
+    case 0xbc: printf("CMP    H"); break;
+    case 0xbd: printf("CMP    L"); break;
+    case 0xbe: printf("CMP    M"); break;
+    case 0xbf: printf("CMP    A"); break;
 
 
 
