@@ -10,6 +10,9 @@ https://github.com/albert-yu/emulator-101/blob/master/src/disassembler.c
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <inttypes.h>
+
+#include "8080emu.h"
 
 int Disassemble8080Op(unsigned char *codebuffer, int pc) {
 unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or allocated buffer
@@ -62,7 +65,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x2d: printf("DCR    L"); break;
     case 0x2e: printf("MVI    L,#$%02x", code[1]); opbytes = 2; break;
     case 0x2f: printf("CMA"); break;
-    case 0x31: printf("LXI    SP, #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0x31: printf("LXI    SP,#$%02x%02x", code[2], code[1]); opbytes = 3; break;
     case 0x32: printf("STA    $%02x%02x", code[2], code[1]); opbytes = 3; break;
     case 0x33: printf("INX    SP"); break;
     case 0x34: printf("INR    M"); break;
