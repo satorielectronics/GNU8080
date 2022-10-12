@@ -153,7 +153,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x87: printf("ADD    A"); break;
     case 0x88: printf("ADC    B"); break;
     case 0x89: printf("ADC    C"); break;
-    case 0x8a: printf("ADC    D)"); break;
+    case 0x8a: printf("ADC    D"); break;
     case 0x8b: printf("ADC    E"); break;
     case 0x8c: printf("ADC    H"); break;
     case 0x8d: printf("ADC    L"); break;
@@ -207,6 +207,9 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xbd: printf("CMP    L"); break;
     case 0xbe: printf("CMP    M"); break;
     case 0xbf: printf("CMP    A"); break;
+    case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
+    case 0xd7: printf("RST     2"); break;
+
 
 
 
@@ -222,6 +225,9 @@ printf("\n");
 
 return opbytes;
 }
+
+
+
 
 int main(int argc, char *argv[]){
 //open the file
