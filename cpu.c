@@ -64,6 +64,7 @@ int emulate8080(State8080* state) {
 
     Disassemble8080Op(opcode, state->pc);
 
+    state->pc += 1;
 
     switch(*opcode) {
         case 0x00: // NOP
