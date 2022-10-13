@@ -58,6 +58,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x25: printf("DCR    H"); break;
     case 0x26: printf("MVI    H,#$%02x", code[1]); opbytes = 2; break;
     case 0x27: printf("DAA"); break;
+    case 0x28: printf("NOP"); 
     case 0x29: printf("DAD    H"); break;
     case 0x2a: printf("LHLD   $%02x%02x", code[2], code[1]); opbytes = 3; break;
     case 0x2b: printf("DCX    H"); break;
@@ -77,7 +78,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x3b: printf("DCX    SP"); break;
     case 0x3c: printf("INR    A"); break;
     case 0x3d: printf("DCR    A"); break;
-    case 0x3e: printf("MVI    A,#0x%02x", code[1]); opbytes = 2; break;
+    case 0x3e: printf("MVI    A,#$%0x02x", code[1]); opbytes = 2; break;
     case 0x3f: printf("CMC"); break;
     case 0x40: printf("MOV    B,B"); break;
     case 0x41: printf("MOV    B,C"); break;
@@ -207,16 +208,26 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xbd: printf("CMP    L"); break;
     case 0xbe: printf("CMP    M"); break;
     case 0xbf: printf("CMP    A"); break;
+    case 0xc0: printf("RNZ"); break;
+    case 0xc1: printf("POP    B"); break;
+    case 0xc2: printf("JNZ    $%02x%02x", code[2], code[1]);
+    case 0xc3: printf("JMP    $%02x%02x",code[2],code[1]); opbytes = 3; break;
+    case 0xc4: printf("CNZ    $%02x%02x",code[2],code[1]); opbytes = 3; break;
+    case 0xc5: printf("PUSH   B"); break;
+    case 0xc6: printf("ADI    #$%02x",code[1]); opbytes = 2; break;
+    case 0xc7: printf("RST    0"); break;
+
     case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
     case 0xd7: printf("RST     2"); break;
 
-
+    case 0xfb: printf("EI"); break; //ENABLE INTERUPT
+    case 0xf3: printf("DI"); break; //DISABLE INTERUPT
 
 
 
     //case 0x3e: printf("MVI    A,#0x%02x", code[1]); opbytes = 2; break;
 
-    case 0xc3: printf("JMP    $%02x%02x",code[2],code[1]); opbytes = 3; break;
+    //case 0xc3: printf("JMP    $%02x%02x",code[2],code[1]); opbytes = 3; break;
 
     default: printf("Unknown Instruction: 0x%02x\t", *code); break; //UNKNOWN INSTRUCTION
 }
