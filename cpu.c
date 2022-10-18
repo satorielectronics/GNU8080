@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>
-#include "disassembler.c"
+#include "8080_dis.c"
 #include "8080emu.h"
 
 static void unimplementedInstruction(State8080* state) {
@@ -138,3 +138,9 @@ void generateInterrupt(State8080 *state, int interrupt_num) {
 	state->pc = 8 * interrupt_num;
 	state->int_enable = 0;
 }
+
+//int main (int argc, char**argv) {
+
+
+//    return 0;
+//}

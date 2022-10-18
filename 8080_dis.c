@@ -1,13 +1,3 @@
-/*
-*codebuffer is a valid pointer to 8080 assembly code
-pc is the current offset into the code
-
-returns the number of bytes of the op
-
-http://www.emulator101.com/reference/8080-by-opcode.html
-https://github.com/albert-yu/emulator-101/blob/master/src/disassembler.c
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>
@@ -215,15 +205,14 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xc4: printf("CNZ    $%02x%02x",code[2],code[1]); opbytes = 3; break;
     case 0xc5: printf("PUSH   B"); break;
     case 0xc6: printf("ADI    #$%02x",code[1]); opbytes = 2; break;
-    case 0xd6: printf("SUI    D8#$%02x", code[1]); opbytes = 2; break;
 
 
     case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
-    case 0xd7: printf("RST    2"); break;
-    case 0xef: printf("RST    5"); break;
+    case 0xd7: printf("RST     2"); break;
 
     case 0xfb: printf("EI"); break; //ENABLE INTERUPT
     case 0xf3: printf("DI"); break; //DISABLE INTERUPT
+
 
 
     //case 0x3e: printf("MVI    A,#0x%02x", code[1]); opbytes = 2; break;
@@ -238,45 +227,3 @@ printf("\n");
 return opbytes;
 }
 
-
-
-
-int main(int argc, char *argv[]){
-//open the file
-FILE *fp = fopen(argv[1], "rb");
-
-//error handling
-if(fp == NULL){
-  printf("Error: Could not open file: \"%s\"\n", argv[1]);
-  exit(1);
-  }
-
-  //Read the file into memory buffer
-  //first get the file size using fseek
-  fseek(fp, 0, SEEK_END); //fseek cursor to END of file
-  int fsize = ftell(fp); //store file size while SEEK_END
-  fseek(fp, 0, SEEK_SET); //fseek SET the cursor to beginning of file
-
-  //allocate a buffer using malloc() to store the file in it
-  unsigned char *buffer = malloc(fsize);
-
-  //now read the file into the buffer using fread()
-  fread(buffer, fsize, 1, fp);
-  fclose(fp); //close the file
-
-  //perform the disassembly
-
-  //initialize the program counter
-  int pc = 0;
-
-  //Now, we disassemble every instruction using a while loop
-
-  while(pc<fsize){
-  pc += Disassemble8080Op(buffer, pc);
-  }
-
-  //Important, free the allocated buffer
-  free(buffer);
-
-  return 0;
-}
