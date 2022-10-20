@@ -45,6 +45,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x17: printf("RAL"); break;
     case 0x18: printf("NOP"); break;
     case 0x19: printf("DAD    D"); break;
+    case 0x20: printf("NOP"); break;
     case 0x1a: printf("LDAX   D"); break;
     case 0x1b: printf("DCX    D"); break;
     case 0x1c: printf("INR    E"); break;
@@ -86,7 +87,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x43: printf("MOV    B,E"); break;
     case 0x44: printf("MOV    B,H"); break;
     case 0x45: printf("MOV    B,L"); break;
-    case 0x46: printf("MOV    B,M"); break; 
+    case 0x46: printf("MOV    B,M"); break;
     case 0x47: printf("MOV    B,A"); break;
     case 0x48: printf("MOV    C,B"); break;
     case 0x49: printf("MOV    C,C"); break;
