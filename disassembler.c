@@ -235,7 +235,14 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xd4: printf("CNC    #$%02x%02x", code[2], code[1]); opbytes = 3; break;
     case 0xd5: printf("PUSH   D"); break;
     case 0xd6: printf("SUI    #$%02x", code[1]); break;
-
+    case 0xd7: printf("RST    2"); break;
+    case 0xd8: printf("RC"); break;
+    case 0xda: printf("JC     #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xdb: printf("IN     #$%02x", code[1]); opbytes = 2; break;
+    case 0xdc: printf("CC     #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xde: printf("NOP"); break;
+    case 0xdf: printf("RST    3"); break;
+    //0xEn
 
 
 
@@ -244,8 +251,10 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
 
 
 //    case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
-    case 0xd7: printf("RST    2"); break;
-    case 0xef: printf("RST    5"); break;
+    //case 0xd7: printf("RST    2"); break;
+
+
+   // case 0xef: printf("RST    5"); break;
 
     case 0xfb: printf("EI"); break; //ENABLE INTERUPT
     case 0xf3: printf("DI"); break; //DISABLE INTERUPT
