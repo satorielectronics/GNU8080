@@ -177,10 +177,13 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0x9d: printf("SSB    L"); break;
     case 0x9e: printf("SSB    M"); break;
     case 0x9f: printf("SSB    A"); break;
+                                                                                                                                       // case 0x98: printf("SSB    B"); break;
+    //CONTINUE HERE'=
+    
     case 0xa0: printf("ANA    B"); break;
-    case 0xa1: printf("ANA    C"); break;
-    case 0xa2: printf("ANA    D"); break;
-    case 0xa3: printf("ANA    E"); break;
+    case 0xa1: printf("ANA    B"); break;
+    case 0xa2: printf("ANA    C"); break;
+    case 0xa3: printf("ANA    D"); break;
     case 0xa4: printf("ANA    H"); break;
     case 0xa5: printf("ANA    L"); break;
     case 0xa6: printf("ANA    M"); break;
@@ -209,6 +212,7 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xbd: printf("CMP    L"); break;
     case 0xbe: printf("CMP    M"); break;
     case 0xbf: printf("CMP    A"); break;
+    //0xCn
     case 0xc0: printf("RNZ"); break;
     case 0xc1: printf("POP    B"); break;
     case 0xc2: printf("JNZ    $%02x%02x", code[2], code[1]);
@@ -216,10 +220,30 @@ unsigned char *code = &codebuffer[pc]; //Stores a single byte from the ROM or al
     case 0xc4: printf("CNZ    $%02x%02x",code[2],code[1]); opbytes = 3; break;
     case 0xc5: printf("PUSH   B"); break;
     case 0xc6: printf("ADI    #$%02x",code[1]); opbytes = 2; break;
-    case 0xd6: printf("SUI    D8#$%02x", code[1]); opbytes = 2; break;
+    case 0xc7: printf("RST     "); break;
+    case 0xc8: printf("RZ"); break;
+    case 0xc9: printf("RET"); break;
+    case 0xca: printf("JZ     #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xcc: printf("CZ     #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xcf: printf("RST    1"); break;
+    //0xDn
+    case 0xd0: printf("RNC"); break;
+    case 0xd1: printf("POP    D"); break;
+    case 0xd2: printf("JNC    #$%02x%02x",  code[2], code[1]); opbytes = 3; break;
+    case 0xd3: printf("OUT    #$%02x",  code[1]); opbytes = 2; break;
+    case 0xd4: printf("CNC    #$%02x%02x", code[2], code[1]); opbytes = 3; break;
+    case 0xd5: printf("PUSH   D"); break;
+    case 0xd6: printf("SUI    #$%02x", code[1]); break;
 
 
-    case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
+
+
+
+  //  case 0xd6: printf("SUI    D8#$%02x", code[1]); opbytes = 2; break;
+
+
+//    case 0xcd: printf("CALL   #$%02x%02x", code[2], code[1]); break;
     case 0xd7: printf("RST    2"); break;
     case 0xef: printf("RST    5"); break;
 
@@ -281,3 +305,4 @@ if(fp == NULL){
 
   return 0;
 }
+
